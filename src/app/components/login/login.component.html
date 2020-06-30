@@ -1,0 +1,32 @@
+
+<div class="text-center" style="margin: 200px;">
+  <form class="form-signin" (ngSubmit) = "onSubmit(formContacto)" #formContacto = "ngForm">
+    <h1 class="h3 mb-3 font-weight-normal">Ingresa </h1>
+    <label for="inputUser" class="sr-only">Nombre de Usuario</label>
+    <input type="text" id="inputUser" class="form-control" placeholder="Nombre de Usuario" required autofocus #nombre = "ngModel" [(ngModel)] = "user.nombre" [ngModelOptions]="{standalone: true}">
+
+    <span *ngIf="!nombre.valid && nombre.touched" style="color: red;">
+      El nombre de usuario no es valido
+    </span><br>
+
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required autofocus #pass = "ngModel" [(ngModel)] = "user.contra" [ngModelOptions]="{standalone: true}">
+
+    <span *ngIf="!pass.valid && pass.touched" style="color: red;">
+      La contraseña no es valida <br>
+    </span><br>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Recordarme
+      </label>
+    </div>
+    <button value="Enviar" class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!formContacto.form.valid">Inicia Sesión</button>
+    <span *ngIf="!sePuede" style="color: red;">
+      El nombre de usuario o la contraseña no son válidos
+    </span>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2023</p>
+  </form>
+</div>
+
