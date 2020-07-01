@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MisProyectos": {
+    "misproyectos": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MisProyectos:build"
+            "browserTarget": "misproyectos:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MisProyectos:build:production"
+              "browserTarget": "misproyectos:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MisProyectos:build"
+            "browserTarget": "misproyectos:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MisProyectos:serve"
+            "devServerTarget": "misproyectos:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MisProyectos:serve:production"
+              "devServerTarget": "misproyectos:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "MisProyectos",
+  "defaultProject": "misproyectos",
   "cli": {
     "analytics": false
   }
