@@ -6,13 +6,15 @@ import { routing, appRoutingProviders} from "./app.routing"; // Cargar el sistem
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { LanguagesComponent } from './components/languages/languages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LanguagesComponent
   ],
   imports: [
     BrowserModule,
